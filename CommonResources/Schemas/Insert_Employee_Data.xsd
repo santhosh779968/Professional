@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.org/Insert_Employee_Data" elementFormDefault="qualified" targetNamespace="http://www.example.org/Insert_Employee_Data">
+      
+  <element name="InsertPersonalData" type="tns:InsertPersonalDataType">
+    </element>
+      
+    
+  <complexType name="InsertPersonalDataType">
+        	
+    <sequence>
+          		
+      <element name="EmpId" type="string"/>
+          		
+      <element name="Name" type="string"/>
+          		
+      <element name="Gender" type="string"/>
+          		
+      <element name="MaritalStatus" type="string"/>
+          		
+      <element name="PhoneNumber" type="int"/>
+          	
+    </sequence>
+        
+  </complexType>
+      
+  <element name="InsertDataResposnse" type="tns:InsertDataResponseType">
+    </element>
+      
+    
+  <complexType name="InsertDataResponseType">
+        	
+    <sequence>
+          		
+      <element name="Response" type="string"/>
+          	
+    </sequence>
+        
+  </complexType>
+      
+  <element name="InsertEmpAddress" type="tns:InsertEmpAddresstype"/>
+      
+    
+  <complexType name="InsertEmpAddresstype">
+        	
+    <sequence>
+          		
+      <element name="EmpID" type="string"/>
+          		
+      <element name="EmpName" type="string"/>
+          		
+      <element name="HouseNumber" type="string"/>
+          		
+      <element name="Street" type="string"/>
+          		
+      <element name="City" type="string"/>
+          		
+      <element name="State" type="string"/>
+          	
+    </sequence>
+        
+  </complexType>
+      
+  <element name="InsertDataRes" type="tns:InsertDataResType"/>
+      
+    
+  <complexType name="InsertDataResType"/>
+      
+  <element name="InsertEmpSalary" type="tns:InsertEmpSalaryType"/>
+      
+    
+  <complexType name="InsertEmpSalaryType">
+        	
+    <sequence>
+          		
+      <element name="EmpID" type="string"/>
+          		
+      <element name="Salary">
+            			
+        <simpleType>
+              				
+          <restriction base="int">
+                					
+            <minExclusive value="1000"/>
+                					
+            <maxExclusive value="10000000"/>
+                				
+          </restriction>
+              			
+        </simpleType>
+            		
+      </element>
+          	
+    </sequence>
+        
+  </complexType>
+      
+  <element name="InsertOrgDetails" type="tns:InsertOrgDetailsType"/>
+      
+    
+  <complexType name="InsertOrgDetailsType">
+        	
+    <sequence>
+          		
+      <element name="EmpID">
+            			
+        <simpleType>
+
+        	<restriction base="int">
+
+        		<minExclusive value="1000" />
+
+        		<maxExclusive value="10000" />
+
+        	</restriction>
+
+        </simpleType>
+
+      </element>
+          		
+      <element name="OrganisationName" type="string"/>
+          		
+      <element name="Branch" type="string"/>
+          	
+    </sequence>
+        
+  </complexType>
+      
+  <element name="InsertInsuranceDetails" type="tns:InsertInsuranceDetailsType">
+    </element>
+      
+    
+  <complexType name="InsertInsuranceDetailsType">
+        	
+    <sequence>
+          		
+      <element name="EmpID" type="int"/>
+          		
+      <element name="PolicyID" type="int"/>
+          		
+      <element name="CoverageTill" type="date"/>
+          	
+    </sequence>
+        
+  </complexType>
+      
+  <complexType name="InsertInsuranceDetailsArray">
+    <sequence>
+      <element maxOccurs="unbounded" minOccurs="0" name="InsertInsuranceDetails" type="tns:InsertInsuranceDetailsType"/>
+    </sequence>
+  </complexType>
+      
+  
+  <element name="EmployeeProfDataReq" type="tns:EmployeeProfDataType"></element>
+    
+    <complexType name="EmployeeProfDataType">
+    	<sequence>
+    		<element name="EmpID" type="string"></element>
+    		<element name="EmployeeName" type="string"></element>
+    		<element name="Designation" type="string"></element>
+    	</sequence>
+    </complexType>
+  
+</schema>
