@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:InsertEmpProData="http://www.tibco.com/InsertEmpProData/" xmlns:Insert_Employee_Data="http://www.example.org/Insert_Employee_Data" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:axis2="http://xsd.tns.tibco.com/bw/models/binding/soap/axis2" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_V2_7UFs-Ee2ckpkHA4rH-g" targetNamespace="http://tns.tibco.com/bw/composite/SOAPcallProf" name="SOAPcallProf" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_tRy8YFs_Ee2ckpkHA4rH-g" name="InsertEmpProData" promote="ComponentInsertProfData/InsertEmpProData">
+    <sca:interface.wsdl xmi:id="_tRy8ZFs_Ee2ckpkHA4rH-g" interface="http://www.tibco.com/InsertEmpProData/#wsdl.interface(InsertEmpProData)" scaext:wsdlLocation="../Service%20Descriptors/InsertEmpProData.wsdl"/>
+    <scaext:binding xsi:type="axis2:SOAPServiceBinding" xmi:id="_z9MdYFs_Ee2ckpkHA4rH-g" name="SOAPServiceBinding" targetNamespace="http://www.tibco.com/c56ea1bade1448dc949e3e9aa2c81dd7/SOAPServiceBinding" portTypeQName="InsertEmpProData:InsertEmpProData" transportBindingType="JMS" attachmentStyle="SwA" modelVersion="1.2.0" portTypeWSDLLocation="platform:/resource/SOAPcallProf/Service%20Descriptors/InsertEmpProData.wsdl">
+      <bindingType xmi:id="_z9MdYVs_Ee2ckpkHA4rH-g"/>
+      <inboundConfiguration xsi:type="axis2:JMSInboundTransportConfiguration" xmi:id="_1rpjQFs_Ee2ckpkHA4rH-g" jmsResource="commonresources.JMSConnectionResource" destination="SampleQueue"/>
+      <operationConfiguration xmi:id="_z9MdYls_Ee2ckpkHA4rH-g" operationName="NewOperation" action="NewOperation" actionNeeded="true">
+        <bindingType xmi:id="_z9MdY1s_Ee2ckpkHA4rH-g"/>
+        <messageConfiguration xmi:id="_z9MdZFs_Ee2ckpkHA4rH-g" messageQName="InsertEmpProData:NewOperationRequest" wsdlLocation="platform:/resource/SOAPcallProf/Service%20Descriptors/InsertEmpProData.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_z9MdZVs_Ee2ckpkHA4rH-g" partName="parameters" partElementName="Insert_Employee_Data:EmployeeProfDataReq"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_z9MdZls_Ee2ckpkHA4rH-g" messageQName="InsertEmpProData:NewOperationResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/SOAPcallProf/Service%20Descriptors/InsertEmpProData.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_z9MdZ1s_Ee2ckpkHA4rH-g" partName="parameters" partElementName="Insert_Employee_Data:InsertDataResposnse"/>
+        </messageConfiguration>
+        <context xmi:id="_z9MdaFs_Ee2ckpkHA4rH-g">
+          <inputMapping xmi:id="_z9MdaVs_Ee2ckpkHA4rH-g"/>
+          <outputMapping xmi:id="_z9Mdals_Ee2ckpkHA4rH-g" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_z9Mda1s_Ee2ckpkHA4rH-g" bindingName="SOAPServiceBinding"/>
+  </sca:service>
+  <sca:property xmi:id="_XOTFcFs-Ee2ckpkHA4rH-g" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_XVDNsFs-Ee2ckpkHA4rH-g" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_XcFp0Fs-Ee2ckpkHA4rH-g" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Xh-PYFs-Ee2ckpkHA4rH-g" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_XnyjgFs-Ee2ckpkHA4rH-g" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_XulIAFs-Ee2ckpkHA4rH-g" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_X0OdAFs-Ee2ckpkHA4rH-g" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_X6-lQFs-Ee2ckpkHA4rH-g" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_YBmxsFs-Ee2ckpkHA4rH-g" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_urV-sFs-Ee2ckpkHA4rH-g" name="ComponentInsertProfData" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_urV-sVs-Ee2ckpkHA4rH-g" processName="soapcallprof.InsertProfData"/>
+    <sca:service xmi:id="_tRpycFs_Ee2ckpkHA4rH-g" name="InsertEmpProData">
+      <sca:interface.wsdl xmi:id="_tRpycVs_Ee2ckpkHA4rH-g" interface="http://www.tibco.com/InsertEmpProData/#wsdl.interface(InsertEmpProData)" scaext:wsdlLocation="../Service%20Descriptors/InsertEmpProData.wsdl"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>
