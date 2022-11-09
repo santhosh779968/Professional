@@ -34,7 +34,7 @@
     <domainDesc></domainDesc>
     <keystorePassword></keystorePassword>
     <bw.Home>\bw\6.8</bw.Home>
-    <httpPort>1948</httpPort>
+    <httpPort>1952</httpPort>
     <profile>default.substvar</profile>
     <restartAppNode>false</restartAppNode>
     <appNode>SOAPcallProf-AppNode</appNode>
