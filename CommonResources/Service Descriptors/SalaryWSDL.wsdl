@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.tibco.com/InsertEmpProData/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="InsertEmpProData" targetNamespace="http://www.tibco.com/InsertEmpProData/" xmlns:xsd1="http://www.example.org/Insert_Employee_Data">
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.tibco.com/SalaryWSDL/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SalaryWSDL" targetNamespace="http://www.tibco.com/SalaryWSDL/" xmlns:xsd1="http://www.EmployeePOC.org/Insert_Employee_Data">
   <wsdl:types>
-    <xsd:schema targetNamespace="http://www.tibco.com/InsertEmpProData/">
+    <xsd:schema targetNamespace="http://www.tibco.com/SalaryWSDL/">
       <xsd:element name="NewOperation">
         <xsd:complexType>
           <xsd:sequence>
@@ -19,25 +19,25 @@
     </xsd:schema>
     <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     	<xsd:import
-    		namespace="http://www.example.org/Insert_Employee_Data"
-    		schemaLocation="../../CommonResources/Schemas/Insert_Employee_Data.xsd">
+    		namespace="http://www.EmployeePOC.org/Insert_Employee_Data"
+    		schemaLocation="../Schemas/Insert_Employee_Data.xsd">
     	</xsd:import></xsd:schema></wsdl:types>
   <wsdl:message name="NewOperationRequest">
-    <wsdl:part element="xsd1:EmployeeProfDataReq" name="parameters"/>
+    <wsdl:part element="xsd1:Insert_EmpSalary_Data" name="parameters"/>
   </wsdl:message>
   <wsdl:message name="NewOperationResponse">
-    <wsdl:part element="xsd1:InsertDataResposnse" name="parameters"/>
+    <wsdl:part element="xsd1:Resposnse_Msg" name="parameters"/>
   </wsdl:message>
-  <wsdl:portType name="InsertEmpProData">
+  <wsdl:portType name="SalaryWSDL">
     <wsdl:operation name="NewOperation">
       <wsdl:input message="tns:NewOperationRequest"/>
       <wsdl:output message="tns:NewOperationResponse"/>
     </wsdl:operation>
   </wsdl:portType>
-  <wsdl:binding name="InsertEmpProDataSOAP" type="tns:InsertEmpProData">
+  <wsdl:binding name="SalaryWSDLSOAP" type="tns:SalaryWSDL">
     <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
     <wsdl:operation name="NewOperation">
-      <soap:operation soapAction="http://www.tibco.com/InsertEmpProData/NewOperation"/>
+      <soap:operation soapAction="http://www.tibco.com/SalaryWSDL/NewOperation"/>
       <wsdl:input>
         <soap:body use="literal"/>
       </wsdl:input>
@@ -46,8 +46,8 @@
       </wsdl:output>
     </wsdl:operation>
   </wsdl:binding>
-  <wsdl:service name="InsertEmpProData">
-    <wsdl:port binding="tns:InsertEmpProDataSOAP" name="InsertEmpProDataSOAP">
+  <wsdl:service name="SalaryWSDL">
+    <wsdl:port binding="tns:SalaryWSDLSOAP" name="SalaryWSDLSOAP">
       <soap:address location="http://www.example.org/"/>
     </wsdl:port>
   </wsdl:service>

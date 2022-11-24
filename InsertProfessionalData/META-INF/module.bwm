@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:AbstractProfessional="http://www.tibco.com/AbstractProfessional/" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:Insert_Employee_Data="http://www.EmployeePOC.org/Insert_Employee_Data" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:axis2="http://xsd.tns.tibco.com/bw/models/binding/soap/axis2" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_stzfQGMmEe2iHriLdSLfkw" targetNamespace="http://tns.tibco.com/bw/composite/InsertProfessionalData" name="InsertProfessionalData" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_K43vsWMnEe2iHriLdSLfkw" name="AbstractProfessional" promote="ComponentProfessionalDataMain/AbstractProfessional">
+    <sca:interface.wsdl xmi:id="_K44WwmMnEe2iHriLdSLfkw" interface="http://www.tibco.com/AbstractProfessional/#wsdl.interface(AbstractProfessional)" scaext:wsdlLocation="../Service%20Descriptors/AbstractProfessional.wsdl"/>
+    <scaext:binding xsi:type="axis2:SOAPServiceBinding" xmi:id="_mtVNwGMqEe2iHriLdSLfkw" name="SOAPServiceBinding" targetNamespace="http://www.tibco.com/402d114810d740b895f2b0640d686a87/SOAPServiceBinding" portTypeQName="AbstractProfessional:AbstractProfessional" transportBindingType="JMS" attachmentStyle="SwA" modelVersion="1.2.0" portTypeWSDLLocation="platform:/resource/InsertProfessionalData/Service%20Descriptors/AbstractProfessional.wsdl">
+      <bindingType xmi:id="_mtovwGMqEe2iHriLdSLfkw"/>
+      <inboundConfiguration xsi:type="axis2:JMSInboundTransportConfiguration" xmi:id="_uiz8QGMqEe2iHriLdSLfkw" jmsResource="JMSConnectionResource" destination="SampleQueue"/>
+      <operationConfiguration xmi:id="_mttoQGMqEe2iHriLdSLfkw" operationName="NewOperation" action="NewOperation" actionNeeded="true">
+        <bindingType xmi:id="_mtuPUGMqEe2iHriLdSLfkw"/>
+        <messageConfiguration xmi:id="_mtuPUWMqEe2iHriLdSLfkw" messageQName="AbstractProfessional:NewOperationRequest" wsdlLocation="platform:/resource/InsertProfessionalData/Service%20Descriptors/AbstractProfessional.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_mtuPUmMqEe2iHriLdSLfkw" partName="parameters" partElementName="Insert_Employee_Data:Insert_Professional_Data"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_mtuPU2MqEe2iHriLdSLfkw" messageQName="AbstractProfessional:NewOperationResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/InsertProfessionalData/Service%20Descriptors/AbstractProfessional.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_mtuPVGMqEe2iHriLdSLfkw" partName="parameters" partElementName="Insert_Employee_Data:Resposnse_Msg"/>
+        </messageConfiguration>
+        <context xmi:id="_mtu2YGMqEe2iHriLdSLfkw">
+          <inputMapping xmi:id="_mtvdcGMqEe2iHriLdSLfkw"/>
+          <outputMapping xmi:id="_mtvdcWMqEe2iHriLdSLfkw" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_mtvdcmMqEe2iHriLdSLfkw" bindingName="SOAPServiceBinding"/>
+  </sca:service>
+  <sca:property xmi:id="_tg8MYGMmEe2iHriLdSLfkw" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_thzIAGMmEe2iHriLdSLfkw" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_tiY94GMmEe2iHriLdSLfkw" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_tjHWoGMmEe2iHriLdSLfkw" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_tj8dEGMmEe2iHriLdSLfkw" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_tktSEGMmEe2iHriLdSLfkw" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_tlUWEGMmEe2iHriLdSLfkw" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_tl8BIGMmEe2iHriLdSLfkw" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_tmn9oGMmEe2iHriLdSLfkw" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_IjZtIGMnEe2iHriLdSLfkw" name="ComponentProfessionalDataMain" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_IjZtIWMnEe2iHriLdSLfkw" processName="insertprofessionaldata.ProfessionalDataMain"/>
+    <sca:service xmi:id="_K43IoGMnEe2iHriLdSLfkw" name="AbstractProfessional">
+      <sca:interface.wsdl xmi:id="_K43vsGMnEe2iHriLdSLfkw" interface="http://www.tibco.com/AbstractProfessional/#wsdl.interface(AbstractProfessional)" scaext:wsdlLocation="../Service%20Descriptors/AbstractProfessional.wsdl"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

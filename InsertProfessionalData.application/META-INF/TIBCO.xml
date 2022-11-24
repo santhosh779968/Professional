@@ -1,65 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<packaging:packageUnit xmlns:packaging="http://schemas.tibco.com/tra/model/core/PackagingModel" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<packaging:packageUnit xmlns:ns="http://xsd.tns.tibco.com/bw/models/sharedresource/httpconnector" xmlns:ns1="http://xsd.tns.tibco.com/bw/models/sharedresource/jms" xmlns:packaging="http://schemas.tibco.com/tra/model/core/PackagingModel" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <packaging:description></packaging:description>
   <packaging:properties>
     <packaging:property>
-      <packaging:name>//SOAPcallProf//BW.DEPLOYMENTUNIT.TYPE</packaging:name>
+      <packaging:name>//InsertProfessionalData//BW.DEPLOYMENTUNIT.TYPE</packaging:name>
       <packaging:type>xsd:string</packaging:type>
       <packaging:visibility>private</packaging:visibility>
       <packaging:scalable>true</packaging:scalable>
       <packaging:overrideValue>false</packaging:overrideValue>
     </packaging:property>
     <packaging:property>
-      <packaging:name>//SOAPcallProf//BW.APPNODE.NAME</packaging:name>
+      <packaging:name>//InsertProfessionalData//BW.APPNODE.NAME</packaging:name>
       <packaging:type>xsd:string</packaging:type>
       <packaging:visibility>private</packaging:visibility>
       <packaging:scalable>true</packaging:scalable>
       <packaging:overrideValue>false</packaging:overrideValue>
     </packaging:property>
     <packaging:property>
-      <packaging:name>//SOAPcallProf//BW.DEPLOYMENTUNIT.NAME</packaging:name>
+      <packaging:name>//InsertProfessionalData//BW.DEPLOYMENTUNIT.NAME</packaging:name>
       <packaging:type>xsd:string</packaging:type>
       <packaging:visibility>private</packaging:visibility>
       <packaging:scalable>true</packaging:scalable>
       <packaging:overrideValue>false</packaging:overrideValue>
     </packaging:property>
     <packaging:property>
-      <packaging:name>//SOAPcallProf//BW.HOST.NAME</packaging:name>
+      <packaging:name>//InsertProfessionalData//BW.HOST.NAME</packaging:name>
       <packaging:type>xsd:string</packaging:type>
       <packaging:visibility>private</packaging:visibility>
       <packaging:scalable>true</packaging:scalable>
       <packaging:overrideValue>false</packaging:overrideValue>
     </packaging:property>
     <packaging:property>
-      <packaging:name>//SOAPcallProf//BW.DOMAIN.NAME</packaging:name>
+      <packaging:name>//InsertProfessionalData//BW.DOMAIN.NAME</packaging:name>
       <packaging:type>xsd:string</packaging:type>
       <packaging:visibility>private</packaging:visibility>
       <packaging:scalable>true</packaging:scalable>
       <packaging:overrideValue>false</packaging:overrideValue>
     </packaging:property>
     <packaging:property>
-      <packaging:name>//SOAPcallProf//BW.DEPLOYMENTUNIT.VERSION</packaging:name>
+      <packaging:name>//InsertProfessionalData//BW.DEPLOYMENTUNIT.VERSION</packaging:name>
       <packaging:type>xsd:string</packaging:type>
       <packaging:visibility>private</packaging:visibility>
       <packaging:scalable>true</packaging:scalable>
       <packaging:overrideValue>false</packaging:overrideValue>
     </packaging:property>
     <packaging:property>
-      <packaging:name>//SOAPcallProf//BW.APPSPACE.NAME</packaging:name>
+      <packaging:name>//InsertProfessionalData//BW.APPSPACE.NAME</packaging:name>
       <packaging:type>xsd:string</packaging:type>
       <packaging:visibility>private</packaging:visibility>
       <packaging:scalable>true</packaging:scalable>
       <packaging:overrideValue>false</packaging:overrideValue>
     </packaging:property>
     <packaging:property>
-      <packaging:name>//SOAPcallProf//BW.MODULE.VERSION</packaging:name>
+      <packaging:name>//InsertProfessionalData//BW.MODULE.VERSION</packaging:name>
       <packaging:type>xsd:string</packaging:type>
       <packaging:visibility>private</packaging:visibility>
       <packaging:scalable>true</packaging:scalable>
       <packaging:overrideValue>false</packaging:overrideValue>
     </packaging:property>
     <packaging:property>
-      <packaging:name>//SOAPcallProf//BW.MODULE.NAME</packaging:name>
+      <packaging:name>//InsertProfessionalData//BW.MODULE.NAME</packaging:name>
       <packaging:type>xsd:string</packaging:type>
       <packaging:visibility>private</packaging:visibility>
       <packaging:scalable>true</packaging:scalable>
@@ -128,10 +128,45 @@
       <packaging:scalable>true</packaging:scalable>
       <packaging:overrideValue>false</packaging:overrideValue>
     </packaging:property>
+    <packaging:property>
+      <packaging:name>//CommonResources///HTTP/Host</packaging:name>
+      <packaging:type>xsd:string</packaging:type>
+      <packaging:visibility>public</packaging:visibility>
+      <packaging:scalable>true</packaging:scalable>
+      <packaging:overrideValue>false</packaging:overrideValue>
+    </packaging:property>
+    <packaging:property>
+      <packaging:name>//CommonResources///HTTP/Port</packaging:name>
+      <packaging:type>xsd:int</packaging:type>
+      <packaging:visibility>public</packaging:visibility>
+      <packaging:scalable>true</packaging:scalable>
+      <packaging:overrideValue>false</packaging:overrideValue>
+    </packaging:property>
+    <packaging:property>
+      <packaging:name>//CommonResources///HTTP/Personal</packaging:name>
+      <packaging:type>xsd:int</packaging:type>
+      <packaging:visibility>public</packaging:visibility>
+      <packaging:scalable>true</packaging:scalable>
+      <packaging:overrideValue>false</packaging:overrideValue>
+    </packaging:property>
+    <packaging:property>
+      <packaging:name>//CommonResources///HTTP/Insurance</packaging:name>
+      <packaging:type>xsd:int</packaging:type>
+      <packaging:visibility>public</packaging:visibility>
+      <packaging:scalable>true</packaging:scalable>
+      <packaging:overrideValue>false</packaging:overrideValue>
+    </packaging:property>
+    <packaging:property>
+      <packaging:name>//CommonResources///HTTP/Organisation</packaging:name>
+      <packaging:type>xsd:int</packaging:type>
+      <packaging:visibility>public</packaging:visibility>
+      <packaging:scalable>true</packaging:scalable>
+      <packaging:overrideValue>false</packaging:overrideValue>
+    </packaging:property>
   </packaging:properties>
   <packaging:modules>
     <packaging:module>
-      <packaging:symbolicName>SOAPcallProf</packaging:symbolicName>
+      <packaging:symbolicName>InsertProfessionalData</packaging:symbolicName>
       <packaging:technologyType>osgi-bundle,bw-appmodule</packaging:technologyType>
       <packaging:technologyVersion>1.0.0.qualifier</packaging:technologyVersion>
     </packaging:module>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.tibco.com/AbstractProfessional/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AbstractProfessional" targetNamespace="http://www.tibco.com/AbstractProfessional/" xmlns:xsd1="http://www.EmployeePOC.org/Insert_Employee_Data">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.tibco.com/AbstractProfessional/">
+      <xsd:element name="NewOperation">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="NewOperationResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="out" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    	<xsd:import
+    		namespace="http://www.EmployeePOC.org/Insert_Employee_Data"
+    		schemaLocation="../../CommonResources/Schemas/Insert_Employee_Data.xsd">
+    	</xsd:import></xsd:schema></wsdl:types>
+  <wsdl:message name="NewOperationRequest">
+    <wsdl:part element="xsd1:Insert_Professional_Data" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="NewOperationResponse">
+    <wsdl:part element="xsd1:Resposnse_Msg" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="AbstractProfessional">
+    <wsdl:operation name="NewOperation">
+      <wsdl:input message="tns:NewOperationRequest"/>
+      <wsdl:output message="tns:NewOperationResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AbstractProfessionalSOAP" type="tns:AbstractProfessional">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="NewOperation">
+      <soap:operation soapAction="http://www.tibco.com/AbstractProfessional/NewOperation"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AbstractProfessional">
+    <wsdl:port binding="tns:AbstractProfessionalSOAP" name="AbstractProfessionalSOAP">
+      <soap:address location="http://www.example.org/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

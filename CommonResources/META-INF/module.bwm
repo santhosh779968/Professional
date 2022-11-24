@@ -1,21 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_2NYjoE-UEe2UDMuL3nFYKQ" targetNamespace="http://tns.tibco.com/bw/composite/CommonResources" name="CommonResources" compositeext:version="1.0.0" compositeext:formatVersion="2">
-  <sca:service xmi:id="_9vowQFptEe2ckpkHA4rH-g" name="SalaryProcessReference" promote="ComponentSalaryProcessReference/SalaryProcessReference">
-    <sca:interface.wsdl xmi:id="_9vpXU1ptEe2ckpkHA4rH-g" interface="http://www.example.org/wsdl/1667366368602#wsdl.interface(SalaryProcessReference)" scaext:wsdlLocation="../Service%20Descriptors/SalaryProcessReference.wsdl"/>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:httpconnector="http://xsd.tns.tibco.com/bw/models/sharedresource/httpconnector" xmlns:jms="http://xsd.tns.tibco.com/bw/models/sharedresource/jms" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_nZahcGJKEe2iHriLdSLfkw" targetNamespace="http://tns.tibco.com/bw/composite/CommonResources" name="CommonResources" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_ImJOYmNDEe2wqIz2QHKArg" name="SalaryWSDL" promote="ComponentSalaryProcessRef/SalaryWSDL">
+    <sca:interface.wsdl xmi:id="_ImJ1cWNDEe2wqIz2QHKArg" interface="http://www.tibco.com/SalaryWSDL/#wsdl.interface(SalaryWSDL)" scaext:wsdlLocation="../Service%20Descriptors/SalaryWSDL.wsdl"/>
   </sca:service>
-  <sca:property xmi:id="_4FIvcE-UEe2UDMuL3nFYKQ" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
-  <sca:property xmi:id="_4FWK0E-UEe2UDMuL3nFYKQ" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
-  <sca:property xmi:id="_4FcRcE-UEe2UDMuL3nFYKQ" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
-  <sca:property xmi:id="_4FiYEE-UEe2UDMuL3nFYKQ" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
-  <sca:property xmi:id="_4Fn3oE-UEe2UDMuL3nFYKQ" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
-  <sca:property xmi:id="_4FtXME-UEe2UDMuL3nFYKQ" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
-  <sca:property xmi:id="_4FyPsE-UEe2UDMuL3nFYKQ" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
-  <sca:property xmi:id="_4F3vQE-UEe2UDMuL3nFYKQ" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
-  <sca:property xmi:id="_4F8nwE-UEe2UDMuL3nFYKQ" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
-  <sca:component xmi:id="_53bIkFptEe2ckpkHA4rH-g" name="ComponentSalaryProcessReference" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_53bIkVptEe2ckpkHA4rH-g" processName="commonresources.SalaryProcessReference"/>
-    <sca:service xmi:id="_9viCkFptEe2ckpkHA4rH-g" name="SalaryProcessReference">
-      <sca:interface.wsdl xmi:id="_9viCkVptEe2ckpkHA4rH-g" interface="http://www.example.org/wsdl/1667366368602#wsdl.interface(SalaryProcessReference)" scaext:wsdlLocation="../Service%20Descriptors/SalaryProcessReference.wsdl"/>
+  <sca:property xmi:id="_oEZ_MGJKEe2iHriLdSLfkw" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_oEuIQGJKEe2iHriLdSLfkw" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_oExyoGJKEe2iHriLdSLfkw" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_oE0O4GJKEe2iHriLdSLfkw" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_oE2rIGJKEe2iHriLdSLfkw" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_oE5HYGJKEe2iHriLdSLfkw" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_oE7joGJKEe2iHriLdSLfkw" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_oE9_4GJKEe2iHriLdSLfkw" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_oFBDMGJKEe2iHriLdSLfkw" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_TStggGsfEe28WerxMM0EpA" name="/HTTP/Host" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_Z94_EGsfEe28WerxMM0EpA" name="/HTTP/Port" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_yvyLYGsfEe28WerxMM0EpA" name="/HTTP/Personal" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_66dt0GsfEe28WerxMM0EpA" name="/HTTP/Insurance" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_ixE2gGsgEe28WerxMM0EpA" name="/HTTP/Organisation" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_2dME8GNCEe2wqIz2QHKArg" name="ComponentSalaryProcessRef" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_2dME8WNCEe2wqIz2QHKArg" processName="commonresources.SalaryProcessRef"/>
+    <sca:service xmi:id="_ImJOYGNDEe2wqIz2QHKArg" name="SalaryWSDL">
+      <sca:interface.wsdl xmi:id="_ImJOYWNDEe2wqIz2QHKArg" interface="http://www.tibco.com/SalaryWSDL/#wsdl.interface(SalaryWSDL)" scaext:wsdlLocation="../Service%20Descriptors/SalaryWSDL.wsdl"/>
     </sca:service>
   </sca:component>
 </sca:composite>

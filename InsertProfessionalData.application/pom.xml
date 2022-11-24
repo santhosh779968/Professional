@@ -4,23 +4,23 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.tibco.bw</groupId>
-    <artifactId>SOAPcallProf.application.parent</artifactId>
+    <artifactId>InsertProfessionalData.application.parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <relativePath>../SOAPcallProf.application.parent</relativePath>
+    <relativePath>../InsertProfessionalData.application.parent</relativePath>
   </parent>
-  <artifactId>SOAPcallProf.application</artifactId>
+  <artifactId>InsertProfessionalData.application</artifactId>
   <packaging>bwear</packaging>
   <properties>
     <backup>false</backup>
     <externalProfile>false</externalProfile>
     <appNodeDesc></appNodeDesc>
     <deployToAdmin>true</deployToAdmin>
-    <appNodeConfig_bw.rest.docApi.port_value>1001</appNodeConfig_bw.rest.docApi.port_value>
+    <appNodeConfig_bw.rest.docApi.port_value>7777</appNodeConfig_bw.rest.docApi.port_value>
     <agentPassword></agentPassword>
     <externalProfileLoc></externalProfileLoc>
     <truststorePassword></truststorePassword>
     <agentUsername></agentUsername>
-    <appSpace>SOAPcallProf-AppSpace</appSpace>
+    <appSpace>InsertProfessionalData-AppSpace</appSpace>
     <agentSSL>false</agentSSL>
     <backupLocation></backupLocation>
     <earUploadPath></earUploadPath>
@@ -34,14 +34,14 @@
     <domainDesc></domainDesc>
     <keystorePassword></keystorePassword>
     <bw.Home>\bw\6.8</bw.Home>
-    <httpPort>1952</httpPort>
+    <httpPort>1905</httpPort>
     <profile>default.substvar</profile>
-    <restartAppNode>false</restartAppNode>
-    <appNode>SOAPcallProf-AppNode</appNode>
+    <restartAppNode>true</restartAppNode>
+    <appNode>InsertProfessionalData-AppNode</appNode>
     <failIfNoTests>false</failIfNoTests>
     <truststorePath></truststorePath>
     <keystorePath></keystorePath>
-    <domain>Employee_Domain</domain>
+    <domain>EmployeeDomain-Domain</domain>
     <agentPort>8079</agentPort>
     <tibco.Home>C:\BW6_Home</tibco.Home>
   </properties>

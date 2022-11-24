@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>SOAPcallProf</name>
+	<name>InsertProfessionalData</name>
 	<comment></comment>
 	<projects>
 		<project>CommonResources</project>
@@ -13,11 +13,6 @@
 		</buildCommand>
 		<buildCommand>
 			<name>org.eclipse.pde.SchemaBuilder</name>
-			<arguments>
-			</arguments>
-		</buildCommand>
-		<buildCommand>
-			<name>org.eclipse.m2e.core.maven2Builder</name>
 			<arguments>
 			</arguments>
 		</buildCommand>
@@ -53,6 +48,11 @@
 		</buildCommand>
 		<buildCommand>
 			<name>com.tibco.bw.rest.binding.builder.RestBindingBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.m2e.core.maven2Builder</name>
 			<arguments>
 			</arguments>
 		</buildCommand>

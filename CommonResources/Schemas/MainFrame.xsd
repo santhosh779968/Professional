@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/MianFrame" xmlns:tns="http://www.example.org/MianFrame" elementFormDefault="qualified">
+
+    <element name="InsertAllData" type="tns:InsertAllDataType"></element>
+    
+    <complexType name="InsertAllDataType">
+    <sequence>
+
+
+    	<element name="Name">
+    		<simpleType>
+    			<restriction base="string">
+    				<maxLength value="100"></maxLength>
+    			</restriction>
+    		</simpleType>
+    	</element>
+
+    	<element name="Gender" type="string" />
+
+    	<element name="PhoneNumber">
+    		<simpleType>
+    			<restriction base="long">
+    				<minExclusive value="6000000000"></minExclusive>
+    				<maxExclusive value="9999999999"></maxExclusive>
+    			</restriction>
+    		</simpleType>
+    	</element>
+
+    	<element name="EmailID" type="string" />
+
+    	<element name="HouseNumber" type="string" />
+
+    	<element name="Street" type="string" />
+
+    	<element name="City" type="string" />
+
+    	<element name="State" type="string" />
+
+    	<element name="PinCode" type="int" />
+
+    	<element name="PolicyID" type="string" />
+
+    	<element name="CoverageDate" type="string" />
+
+    	<element name="Salary">
+    		<simpleType>
+    			<restriction base="long">
+    				<maxExclusive value="10000000"></maxExclusive>
+    				<minExclusive value="1000"></minExclusive>
+    			</restriction>
+    		</simpleType>
+    	</element>
+
+    	<element name="OrganisationName" type="string" />
+
+    	<element name="Branch" type="string" />
+
+    	<element name="Designation" type="string"></element>
+
+    	<element name="Experience" type="string"></element>
+
+    	<element name="DataChoice" type="string" default="All"></element>
+    	<element name="GeneratedID" type="string" maxOccurs="1" minOccurs="0"></element>
+    </sequence>
+    </complexType>
+</schema>

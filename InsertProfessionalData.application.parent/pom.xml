@@ -3,13 +3,13 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.tibco.bw</groupId>
-  <artifactId>SOAPcallProf.application.parent</artifactId>
+  <artifactId>InsertProfessionalData.application.parent</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <modules>
     <module>../CommonResources</module>
-    <module>../SOAPcallProf</module>
-    <module>../SOAPcallProf.application</module>
+    <module>../InsertProfessionalData</module>
+    <module>../InsertProfessionalData.application</module>
   </modules>
   <build>
     <plugins>

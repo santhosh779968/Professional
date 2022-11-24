@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: SOAPcallProf Module
-Bundle-SymbolicName: SOAPcallProf
+Bundle-Name: InsertProfessionalData Module
+Bundle-SymbolicName: InsertProfessionalData
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: TIBCO Software Inc.
 TIBCO-BW-ApplicationModule: META-INF/module.bwm
