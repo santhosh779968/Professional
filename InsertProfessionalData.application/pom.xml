@@ -15,7 +15,7 @@
     <externalProfile>false</externalProfile>
     <appNodeDesc></appNodeDesc>
     <deployToAdmin>true</deployToAdmin>
-    <appNodeConfig_bw.rest.docApi.port_value>7777</appNodeConfig_bw.rest.docApi.port_value>
+    <appNodeConfig_bw.rest.docApi.port_value>7782</appNodeConfig_bw.rest.docApi.port_value>
     <agentPassword></agentPassword>
     <externalProfileLoc></externalProfileLoc>
     <truststorePassword></truststorePassword>
